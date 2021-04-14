@@ -1,5 +1,7 @@
 
 
+using System;
+
 namespace TodoWebAPI.Models.Todo {
 
     public class TodoItem
@@ -9,7 +11,9 @@ namespace TodoWebAPI.Models.Todo {
         public string Name { get; set; }
 
         public bool IsComplete { get; set; }
+        public DateTime Deadline { get; set; }
+        public string Category { get; set; }
 
-        public virtual Person Responsible { get; set; }
+        public Person Responsible { get; set; }
     }
 }
