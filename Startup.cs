@@ -64,6 +64,8 @@ namespace TodoWebAPI
 
             app.UseRouting();
 
+            app.UseCors("Allow");
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
