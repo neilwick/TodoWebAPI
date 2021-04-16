@@ -25,7 +25,7 @@ namespace TodoWebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
-            return await _context.TodoItems.Include(tdi => tdi.Responsible).ToListAsync();
+            return await _context.TodoItems.OrderBy(i => i.Deadline).Include(tdi => tdi.Responsible).ToListAsync();
         }
 
         // GET: api/TodoItem/5
